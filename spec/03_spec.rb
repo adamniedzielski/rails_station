@@ -23,6 +23,7 @@ describe "Forms and validations", type: :feature do
     fill_in "special_day_when", with: "15/07/2016"
     click_button "Create!"
     expect(current_path).to eq "/special_days"
+    expect(page).to have_content("Birthday")
   end
 
   it "does not allow special days without name" do
